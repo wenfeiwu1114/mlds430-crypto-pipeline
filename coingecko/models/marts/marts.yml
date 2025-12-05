@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_crypto_daily
+    description: "Fact table containing daily Bitcoin metrics with moving averages"
+    columns:
+      - name: date
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_crypto_overview
+    description: "Summary table for KPIs used in Tableau dashboard"
